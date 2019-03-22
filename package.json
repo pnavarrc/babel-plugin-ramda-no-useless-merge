@@ -1,0 +1,28 @@
+{
+  "name": "babel-plugin-ramda-no-useless-merge",
+  "version": "1.0.0",
+  "description": "Babel Plugin to transform `R.merge(a, b)` → `{...a, ...b}`",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnavarrc/babel-plugin-ramda-no-useless-merge.git"
+  },
+  "keywords": [
+    "babel-plugin",
+    "ramda"
+  ],
+  "author": "Pablo Navarro <pnavarrc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnavarrc/babel-plugin-ramda-no-useless-merge/issues"
+  },
+  "homepage": "https://github.com/pnavarrc/babel-plugin-ramda-no-useless-merge#readme",
+  "devDependencies": {
+    "@babel/types": "^7.4.0",
+    "@codemod/cli": "^2.1.5",
+    "prettier": "^1.16.4"
+  }
+}
