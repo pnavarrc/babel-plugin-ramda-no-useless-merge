@@ -7,13 +7,13 @@
 Using npm
 
 ```sh
-npm install --save-dev @pnavarrc/babel-plugin-ramda-no-useless-merge
+npm install --save-dev babel-plugin-ramda-no-useless-merge
 ```
 
 or using yarn
 
 ```sh
-yarn add @pnavarrc/babel-plugin-ramda-no-useless-merge
+yarn add babel-plugin-ramda-no-useless-merge
 ```
 
 ## Example
