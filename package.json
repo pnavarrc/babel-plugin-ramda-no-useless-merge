@@ -1,0 +1,62 @@
+{
+  "name": "babel-plugin-ramda-no-useless-merge",
+  "version": "1.0.0",
+  "description": "Babel Plugin to transform `R.merge(a, b)` → `{...a, ...b}`",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "release:patch": "release patch",
+    "release:minor": "release minor",
+    "release:major": "release major"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnavarrc/babel-plugin-ramda-no-useless-merge.git"
+  },
+  "keywords": [
+    "babel-plugin",
+    "ramda"
+  ],
+  "author": "Pablo Navarro <pnavarrc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnavarrc/babel-plugin-ramda-no-useless-merge/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,jsx,json,css,md,babelrc}": [
+        "prettier --write",
+        "git add"
+      ],
+      "*.{js,jsx}": "eslint"
+    },
+    "ignore": [
+      "**/lib/**/*"
+    ]
+  },
+  "homepage": "https://github.com/pnavarrc/babel-plugin-ramda-no-useless-merge#readme",
+  "devDependencies": {
+    "@codemod/cli": "^2.1.5",
+    "babel-plugin-tester": "^6.2.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.17.1",
+    "prettier-eslint": "^8.8.2",
+    "release": "^6.0.1"
+  },
+  "dependencies": {
+    "@babel/types": "^7.4.4",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7"
+  }
+}
