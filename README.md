@@ -1,19 +1,21 @@
 # babel-plugin-ramda-no-useless-merge
 
-> Replaces `R.merge(a, b)` with the `{ ...a, ...b }`
+> Replaces `R.merge(a, b)` with `{ ...a, ...b }`
+
+Why?
 
 ## Installation
 
 Using npm
 
 ```sh
-npm install --save-dev @pnavarrc/babel-plugin-no-useless-merge
+npm install --save-dev @pnavarrc/babel-plugin-ramda-no-useless-merge
 ```
 
 or using yarn
 
 ```sh
-yarn add @pnavarrc/babel-plugin-no-useless-merge
+yarn add @pnavarrc/babel-plugin-ramda-no-useless-merge
 ```
 
 ## Example
@@ -36,14 +38,25 @@ const c = { ...a, ...b };
 
 ```json
 {
-  "plugins": ["babel-plugin-ramda-no-useless-merge"]
+  "plugins": ["ramda-no-useless-merge"]
 }
 ```
 
 ### Via CLI
 
 ```shell
-babel --plugins babel-plugin-ramda-no-useless-merge script.js
+babel --plugins ramda-no-useless-merge script.js
 ```
 
 ## Learn More
+
+- https://babeljs.io/docs/en/next/
+- https://babeljs.io/docs/en/next/plugins
+- https://github.com/jamiebuilds/babel-handbook
+- YouTube
+- Front-end masters course on AST
+- AST Explorer
+
+## License
+
+MIT
