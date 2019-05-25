@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ramda/no-useless-merge R.merge with 2 identifiers: R.merge with 2 identifiers 1`] = `
+"
+R.merge(a, b)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+({ ...a, ...b });
+"
+`;
+
+exports[`ramda/no-useless-merge R.merge with 2 objects: R.merge with 2 objects 1`] = `
+"
+R.merge({ name: 'a' }, { name: 'b' })
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+({ ...{ name: 'a' }, ...{ name: 'b' } });
+"
+`;
+
+exports[`ramda/no-useless-merge R.merge with R.merge: R.merge with R.merge 1`] = `
+"
+R.merge({ name: 'a' }, R.merge(a, b));
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+({ ...{ name: 'a' }, ...{ ...a, ...b } });
+"
+`;
+
+exports[`ramda/no-useless-merge R.merge with function arguments: R.merge with function arguments 1`] = `
+"
+const c = R.merge(createObject(), getOptions());
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const c = { ...createObject(), ...getOptions() };
+"
+`;
+
+exports[`ramda/no-useless-merge R.merge with more nested R.merge: R.merge with more nested R.merge 1`] = `
+"
+R.merge({ name: 'a' }, R.merge(a, R.merge(b, c)));
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+({ ...{ name: 'a' }, ...{ ...a, ...{ ...b, ...c } } });
+"
+`;
