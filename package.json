@@ -57,6 +57,6 @@
   "dependencies": {
     "@babel/types": "^7.4.4",
     "husky": "^2.3.0",
-    "lint-staged": "^8.1.7"
+    "lint-staged": "^9.1.0"
   }
 }
