@@ -1,4 +1,6 @@
 # babel-plugin-ramda-no-useless-merge
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpnavarrc%2Fbabel-plugin-ramda-no-useless-merge.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpnavarrc%2Fbabel-plugin-ramda-no-useless-merge?ref=badge_shield)
+
 
 > Replaces `R.merge(a, b)` with `{ ...a, ...b }`
 
@@ -56,3 +58,6 @@ babel --plugins ramda-no-useless-merge script.js
 ## License
 
 MIT
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpnavarrc%2Fbabel-plugin-ramda-no-useless-merge.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpnavarrc%2Fbabel-plugin-ramda-no-useless-merge?ref=badge_large)
