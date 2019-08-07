@@ -1,19 +1,17 @@
-import * as t from "@babel/types";
+export default function({ types: t }) {
+  const isRamdaMerge = node =>
+    t.isMemberExpression(node) &&
+    t.isIdentifier(node.object, { name: "R" }) &&
+    t.isIdentifier(node.property, { name: "merge" });
 
-const isRamdaMerge = node =>
-  t.isMemberExpression(node) &&
-  t.isIdentifier(node.object, { name: "R" }) &&
-  t.isIdentifier(node.property, { name: "merge" });
+  const isUselessRamdaMerge = node =>
+    t.isCallExpression(node) &&
+    isRamdaMerge(node.callee) &&
+    node.arguments.length === 2;
 
-const isUselessRamdaMerge = node =>
-  t.isCallExpression(node) &&
-  isRamdaMerge(node.callee) &&
-  node.arguments.length === 2;
+  const createMergeSpread = (a, b) =>
+    t.objectExpression([t.spreadElement(a), t.spreadElement(b)]);
 
-const createMergeSpread = (a, b) =>
-  t.objectExpression([t.spreadElement(a), t.spreadElement(b)]);
-
-export default function() {
   return {
     name: "ramda/no-useless-merge",
     visitor: {
